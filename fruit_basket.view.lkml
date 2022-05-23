@@ -1,5 +1,6 @@
 view: fruit_basket {
   derived_table: {
+    datagroup_trigger: permanent
     sql:
       SELECT
         'green' AS color, 'lime' AS fruit_type, 'no' AS is_round, 0.41 AS price, 2.4 AS price_per_pound, 0.17 AS weight
