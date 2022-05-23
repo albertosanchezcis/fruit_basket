@@ -109,6 +109,11 @@ view: fruit_basket {
     sql: ${price_per_pound} ;;
   }
 
+  measure: average_weight {
+    type: average
+    value_format_name: decimal_2
+    sql: ${weight} ;;
+  }
 
 
 
