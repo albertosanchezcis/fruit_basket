@@ -74,8 +74,43 @@ view: fruit_basket {
   measure: count {
     type: count
   }
+
+  measure: count_types {
+    type: count_distinct
+    sql: ${fruit_type} ;;
+  }
+
   measure: count_color {
     type: count_distinct
-    sql: $col ;;
+    sql: ${color} ;;
   }
+
+  measure: total_price {
+    type: sum
+    value_format_name: usd
+    sql: ${price} ;;
+  }
+
+  measure: total_weight {
+    type: sum
+    value_format_name: decimal_2
+    sql: ${weight} ;;
+  }
+
+  measure: average_price {
+    type: average
+    value_format_name: usd
+    sql: ${price} ;;
+  }
+
+  measure: average_price_per_pound{
+    type: average
+    value_format_name: usd
+    sql: ${price_per_pound} ;;
+  }
+
+
+
+
+
 }
