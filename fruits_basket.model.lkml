@@ -1,6 +1,8 @@
+# I add a connection, because it is mandatory but it could be any connection
 connection: "looker_partner_demo"
 
-include: "/fruit_basket.view.lkml"                # include all views in the views/ folder in this project
+include: "/fruit_basket.view.lkml"
+
 
 datagroup: permanent {
   sql_trigger: select 1 ;;
